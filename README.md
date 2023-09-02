@@ -1,14 +1,37 @@
-# Roadflow Api
+# RoadFlow - Generative Learning Platform for Tech Skills
 
-This is the backend api for RoadFlow. It uses DRF for api development and MindsDB NLP Models for user reviews classification and sentiment. The API follows REST API requirements. It can be tested from the Swagger documentation or any client.
+Welcome to the ATRONS GitHub repository! Roadflow is an online learning platform designed to provided users with a seamless and personalized experience for learning tech skills using generative AI. This repository contains the source code and development history of the RoadFlow Platform API.
+
+This is the backend api for RoadFlow. It uses DRF for api development and MindsDB for user reviews classification, sentiment analysis and generating texts. The API follows REST API requirements. It can be tested from the Swagger documentation or any client.
+
+## Structure
+
+The repository structure is as follows:
+
+- `src` - This directory contains the backend code of the Roadflow platform, including the API endpoints, database models, and business logic implemented in Python using the Django Rest framework.
+- `docs` - This directory contains the documentation for the Roadflow platform, including the API documentation, database schema, and other relevant information.
+- `src/models` - This directory contains the AI models used by the Roadflow platform, including the MindsDB models for user reviews classification, sentiment analysis and generating texts.
+
+## Purpose
+
+The purpose of this project is to provide a platform for users to learn tech skills using generative AI and personalized test feedback. The platform will provide users with a seamless and personalized experience for learning tech skills using generative AI. We aim to create a platform that allows users to learn by following a personalized and curated learning path. Ensuring they are learning the right topics at the right time and accordingly.
+
+## How Generative AI Models are Solving the Problem
+
+Roadflow leverages Generative AI models to enhance the it's core functionality, especially the learning experience for users in the domain of Question and Answering. This is built in such a way that the application domain is not coupled with the model used. This allows for easy swapping of models in the future without affecting the core functionality of the platform.
+
+MindsDB is currently used to utilize open ai and hugging face models for the following:
+
+- User reviews classification
+- Sentiment analysis
+- Generating texts
+
+By incorporating Generative AI models into Roadflow using MindsDB allows the platform to train and fine-tune the models based on the data accumulated over time. This allows the platform to provide a personalized experience for users. Users can get detailed feedback on their tests and learn from their mistakes. This is done by using the generative AI models to generate feedback for the user based on their test results. Allowing for dynamic but curated learning paths for users. Users can be assured that they are learning the right topics at the right time and accordingly no matter what tech skill they are learning.
+
 
 ## Figma Design
 
 Here is a link to the [figma](https://www.figma.com/file/4sWAOaXGdd16N5AlyFVSBl/RoadTrack-Project?node-id=10-39&t=J5xBuuZrD2TIcSLZ-0).
-
-## Github Project
-
-Here is a link to the [Github Project](https://github.com/users/devvspaces/projects/2/views/2?layout=board).
 
 ## DB Diagram Design
 
