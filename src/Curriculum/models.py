@@ -34,6 +34,7 @@ class Curriculum(models.Model):
     resources = models.ManyToManyField('Resource.Resource', blank=True)
     rating = models.FloatField(default=0.0)
     ratings = models.IntegerField(default=0)
+    private = models.BooleanField(default=False)
 
     def get_syllabus(self) -> models.QuerySet['CurriculumSyllabi']:
         return self.curriculumsyllabi_set.all()

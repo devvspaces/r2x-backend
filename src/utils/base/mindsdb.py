@@ -2,9 +2,6 @@ import mindsdb_sdk
 from django.conf import settings
 from Curriculum.models import CurriculumReview
 
-username = settings.MINDSDB_SERVER_USERNAME
-password = settings.MINDSDB_SERVER_PASSWORD
-
 server = None
 
 
@@ -13,8 +10,8 @@ def connect_server():
     if not server:
         server = mindsdb_sdk.connect(
             'https://cloud.mindsdb.com',
-            login=username,
-            password=password
+            login=settings.MINDSDB_SERVER_USERNAME,
+            password=settings.MINDSDB_SERVER_PASSWORD
         )
     return server
 

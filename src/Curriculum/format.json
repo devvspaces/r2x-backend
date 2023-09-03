@@ -1,0 +1,39 @@
+{
+    "name": "curriculum name",
+    "objective": "curriculum objective objective",
+    "description": "curriculum description",
+    "prerequisites": "curriculum prerequisites",
+    "difficulty": "Beginner | Intermediate | Advanced",
+    "modules": [
+        {
+            "title": "module x",
+            "description": "module x description",
+            "topics": [
+                {
+                    "title": "topic x",
+                    "description": "topic x description",
+                    "resources": [
+                        {
+                            "title": "resource x",
+                            "description": "resource x description",
+                            "type": "video | article | book | course | other",
+                            "url": "resource x url"
+                        }
+                    ],
+                    "quizzes": [
+                        {
+                            "question": "question x",
+                            "options": [
+                                {
+                                    "option": "option x",
+                                    "is_correct": true,
+                                    "reason": "option x reason"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

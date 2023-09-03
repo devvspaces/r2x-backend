@@ -36,13 +36,11 @@ mccabe==0.7.0
 mindsdb-sdk==1.0.2
 mindsdb-sql==0.5.1
 model-bakery==1.7.0
-numpy==1.24.3
 openapi-codec==1.3.2
 packaging==21.0
-pandas==1.3.5
-Pillow==8.4.0
+Pillow==10.0.0
 pluggy==1.0.0
-psycopg2-binary==2.9.3
+psycopg2-binary==2.9.7
 py==1.11.0
 pycodestyle==2.10.0
 pycparser==2.21
@@ -62,8 +60,6 @@ python-decouple==3.6
 pytz==2021.3
 redis==4.3.1
 requests==2.27.1
-ruamel.yaml==0.17.16
-ruamel.yaml.clib==0.2.6
 simplejson==3.17.5
 six==1.16.0
 sly==0.5

@@ -7,6 +7,7 @@ from django.views.decorators.cache import cache_page
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework import generics, status
 from rest_framework.response import Response
+from Curriculum.creator import generate_curriculum
 
 from Curriculum.models import Curriculum, SyllabiProgress, SyllabiTopic
 from Quiz.models import QOption, Quiz
@@ -375,3 +376,19 @@ class GetUpcomingEvents(generics.ListAPIView):
     @method_decorator(cache_page(settings.SHOWWCASE_API_CACHE_TIME))
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
+
+
+class CreateCurriculum(generics.CreateAPIView):
+    serializer_class = serializers.GenerateCurriculumSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
+        curriculum = generate_curriculum(
+            skill=data.get('skill'),
+            experience=data.get('experience'),
+            weekly_time=data.get('weekly_time'),
+        )
+        data = serializers.CurriculumSerializer(curriculum).data
+        return Response(data, status=status.HTTP_201_CREATED)

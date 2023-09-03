@@ -232,3 +232,18 @@ class EventSerializer(serializers.Serializer):
     reading_time = serializers.CharField()
     image = serializers.URLField()
     projectSummary = serializers.CharField()
+
+
+class GenerateCurriculumSerializer(serializers.Serializer):
+    skill = serializers.CharField()
+    experience = serializers.ChoiceField(choices=[
+        ('Beginner', 'Beginner'),
+        ('Intermediate', 'Intermediate'),
+        ('Advanced', 'Advanced')
+    ])
+    weekly_time = serializers.IntegerField()
+    
+    def validate_weekly_time(self, val):
+        if val < 0:
+            raise serializers.ValidationError("Weekly time cannot be negative")
+        return val
